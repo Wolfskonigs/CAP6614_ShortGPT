@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights and checkpoints (too large for git)
+*.bin
+*.safetensors
+*.pt
+*.pth
+llama2-7b-shortgpt-pruned/
+
+# Output files
+bi_scores.png
+
+# Environment and secrets
+.env
+*.token
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/

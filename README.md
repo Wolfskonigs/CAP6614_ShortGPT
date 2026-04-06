@@ -15,9 +15,19 @@ ShortGPT measures how much each transformer layer changes the hidden state passi
 
 ## Files
 
-- **`shortgpt_pipeline.ipynb`** -- Main notebook. Runs the full pipeline from model loading through pruning to evaluation. Start here.
+- **`shortgpt_pipeline.ipynb`** -- Main notebook. Runs the full ShortGPT pipeline on Llama-2-7B: model loading, BI computation, pruning, evaluation. Start here.
+- **`shortgpt_pipeline_pruned.ipynb`** -- Automated pruning sweep across multiple removal levels (0, 2, 4, 6, 8 layers) with sensitivity curve and results table.
+- **`Phi2_Eval.ipynb`** -- Extension model evaluation. Runs the full ShortGPT pipeline on Phi-2 to test cross-architecture generalization.
+- **`quick_benchmark.py`** -- Inference benchmarking utilities: tokens/sec, latency, and VRAM measurement.
 - **`shortgpt_utils.py`** -- Importable utility functions. Use this to call functions from your own notebook or script without copy-pasting.
 - **`requirements.txt`** -- Python dependencies.
+
+## Team Contributions
+
+- **Tristan Sherzer** -- Core pipeline implementation: 4-bit model loading, Block Influence metric, layer removal logic, perplexity evaluation, main notebook and utility module.
+- **Adrian Teodorescu** -- Qualitative evaluation (Section 5.6 unpruned vs pruned text generation), inference benchmarking module (`quick_benchmark.py`), Colab validation and testing.
+- **Kensley Cadet** -- Multi-level pruning sweep (`shortgpt_pipeline_pruned.ipynb`): automated evaluation across pruning levels with sensitivity curve and results table.
+- **Morgan Skinner** -- Extension model evaluation (`Phi2_Eval.ipynb`): full ShortGPT pipeline on Phi-2, cross-architecture BI analysis and benchmarking.
 
 ## Quick Start (Google Colab)
 

@@ -25,9 +25,9 @@ ShortGPT measures how much each transformer layer changes the hidden state passi
 ## Team Contributions
 
 - **Tristan Sherzer** -- Core pipeline implementation: 4-bit model loading, Block Influence metric, layer removal logic, perplexity evaluation, main notebook and utility module.
-- **Adrian Teodorescu** -- Qualitative evaluation (Section 5.6 unpruned vs pruned text generation), inference benchmarking module (`quick_benchmark.py`), Colab validation and testing.
+- **Adrian Teodorescu** -- Qualitative evaluation (Section 5.6), inference benchmarking (Sections 6, 7.5), speedup analysis, Colab validation, and Phi-2 integration (Section 11).
 - **Kensley Cadet** -- Multi-level pruning sweep (`shortgpt_pipeline_pruned.ipynb`): automated evaluation across pruning levels with sensitivity curve and results table.
-- **Morgan Skinner** -- Extension model evaluation (`Phi2_Eval.ipynb`): full ShortGPT pipeline on Phi-2, cross-architecture BI analysis and benchmarking.
+- **Morgan Skinner** -- Phi-2 extension model evaluation (`Phi2_Eval.ipynb`).
 
 ## Quick Start (Google Colab)
 
